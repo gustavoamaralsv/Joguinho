@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sky_top">#FF6EB4F5</color>
+    <color name="sky_bottom">#FFE1F5FF</color>
+    <color name="hill_near">#FF469650</color>
+    <color name="hill_far">#FF327846</color>
+    <color name="hud_text">#FF141E46</color>
+    <color name="banner_orange">#FFFF7800</color>
+    <color name="target_blue">#FF1E5AC8</color>
+    <color name="target_gold">#FFF0B414</color>
+    <color name="blocker_red">#FFB41E1E</color>
+    <color name="time_bar_ok">#FF32AA46</color>
+    <color name="time_bar_low">#FFD22828</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Joguinho</string>
+    <string name="app_name">Cannon Game</string>
     <string name="hud_time">Tempo: %.1f</string>
     <string name="hud_score">Pontos: %d</string>
     <string name="hud_level">Nível %d</string>

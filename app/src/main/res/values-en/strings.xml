@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cannon Game</string>
+    <string name="hud_time">Time: %.1f</string>
+    <string name="hud_score">Score: %d</string>
+    <string name="hud_level">Level %d</string>
+    <string name="hud_record">High score: %d</string>
+    <string name="level_banner">Level %d!</string>
+    <string name="game_over">Game over</string>
+    <string name="new_record">New high score!</string>
+    <string name="results_format">Score: %1$d\nLevel reached: %2$d\nHigh score: %3$d\nShots fired: %4$d\nTotal time: %5$.1f s</string>
+    <string name="reset_game">Play again</string>
+</resources>
