@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Joguinho</string>
+    <string name="time_remaining">Tempo restante: %.2f</string>
+    <string name="results_format">Tiros disparados: %1$d\nTempo total: %2$.1f s</string>
+    <string name="reset_game">Jogar novamente</string>
+    <string name="win">Você venceu!</string>
+    <string name="lose">Você perdeu!</string>
+</resources>
