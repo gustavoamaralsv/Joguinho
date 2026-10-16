@@ -2,6 +2,7 @@ package com.example.joguinho
 
 import android.graphics.Canvas
 import android.graphics.Color
+import android.graphics.Paint
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.max
@@ -16,8 +17,8 @@ class Cannon(
 ) : GameElement() {
 
     private val baseX = 0f
+    private val hubPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.rgb(150, 150, 165) }
 
-    /** Ângulo em radianos; 0 = apontando para a direita. */
     var angle = 0f
         private set
 
@@ -25,11 +26,11 @@ class Cannon(
     val tipY: Float get() = baseY + barrelLength * sin(angle)
 
     init {
-        paint.color = Color.BLACK
+        paint.color = Color.rgb(50, 50, 60)
         paint.strokeWidth = barrelWidth
+        paint.strokeCap = Paint.Cap.ROUND
     }
 
-    /** Aponta o cano para o ponto tocado (nunca para trás). */
     fun aimAt(touchX: Float, touchY: Float) {
         val dx = max(touchX - baseX, 1f)
         angle = atan2(touchY - baseY, dx)
@@ -38,5 +39,6 @@ class Cannon(
     override fun draw(canvas: Canvas) {
         canvas.drawLine(baseX, baseY, tipX, tipY, paint)
         canvas.drawCircle(baseX, baseY, baseRadius, paint)
+        canvas.drawCircle(baseX, baseY, baseRadius * 0.45f, hubPaint)
     }
 }

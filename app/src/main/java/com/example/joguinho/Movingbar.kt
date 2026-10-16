@@ -3,7 +3,7 @@ package com.example.joguinho
 import android.graphics.Canvas
 import android.graphics.RectF
 
-/** Barra vertical que sobe e desce, quicando nos limites. */
+/** Barra vertical (cantos arredondados) que sobe e desce, quicando nos limites. */
 open class MovingBar(
     left: Float,
     top: Float,
@@ -12,7 +12,7 @@ open class MovingBar(
     private var velocityY: Float,
     private val minY: Float,
     private val maxY: Float,
-    color: Int
+    val color: Int
 ) : GameElement() {
 
     val rect = RectF(left, top, left + width, top + height)
@@ -33,6 +33,7 @@ open class MovingBar(
     }
 
     override fun draw(canvas: Canvas) {
-        canvas.drawRect(rect, paint)
+        val r = rect.width() / 2f
+        canvas.drawRoundRect(rect, r, r, paint)
     }
 }
