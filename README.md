@@ -96,7 +96,35 @@ Joguinho/
 
 ## Screenshots
 
-Adicione capturas ou um GIF em [`docs/screenshots/`](docs/screenshots/) após executar o app no emulador ou celular.
+<p align="center">
+  <img src="docs/screenshots/Screenshot_11.png" alt="Tela inicial" width="720" />
+  <br />
+  <em>Tela inicial</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/Screenshot_12.png" alt="Partida no nível 1" width="720" />
+  <br />
+  <em>Partida — nível 1, mirando os alvos</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/Screenshot_13.png" alt="Disparo em andamento" width="720" />
+  <br />
+  <em>Disparo com rastro da bala</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/Screenshot_14.png" alt="Menu durante o jogo" width="720" />
+  <br />
+  <em>Menu (pausar / reiniciar / início)</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/Screenshot_15.png" alt="Tela de pausa" width="720" />
+  <br />
+  <em>Tela de pausa</em>
+</p>
 
 ## Testes
 
