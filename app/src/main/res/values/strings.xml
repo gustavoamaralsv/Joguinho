@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Joguinho</string>
-    <string name="time_remaining">Tempo restante: %.2f</string>
-    <string name="results_format">Tiros disparados: %1$d\nTempo total: %2$.1f s</string>
+    <string name="hud_time">Tempo: %.1f</string>
+    <string name="hud_score">Pontos: %d</string>
+    <string name="hud_level">Nível %d</string>
+    <string name="hud_record">Recorde: %d</string>
+    <string name="level_banner">Nível %d!</string>
+    <string name="game_over">Fim de jogo</string>
+    <string name="new_record">Novo recorde!</string>
+    <string name="results_format">Pontuação: %1$d\nNível alcançado: %2$d\nRecorde: %3$d\nTiros disparados: %4$d\nTempo total: %5$.1f s</string>
     <string name="reset_game">Jogar novamente</string>
-    <string name="win">Você venceu!</string>
-    <string name="lose">Você perdeu!</string>
 </resources>
