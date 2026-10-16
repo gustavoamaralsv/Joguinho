@@ -1,11 +1,17 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 
 /** Alvo: ao ser atingido, desaparece e o jogador ganha tempo. */
 class Target(
-    left: Float, top: Float, width: Float, height: Float,
-    velocityY: Float, minY: Float, maxY: Float, color: Int
+    left: Float,
+    top: Float,
+    width: Float,
+    height: Float,
+    velocityY: Float,
+    minY: Float,
+    maxY: Float,
+    color: Int,
 ) : MovingBar(left, top, width, height, velocityY, minY, maxY, color) {
 
     var hit = false

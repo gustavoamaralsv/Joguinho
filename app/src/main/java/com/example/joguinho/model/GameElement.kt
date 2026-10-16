@@ -1,4 +1,4 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 import android.graphics.Paint

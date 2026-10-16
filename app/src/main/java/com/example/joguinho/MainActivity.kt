@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.example.joguinho.CannonView
+import com.example.joguinho.game.CannonView
+import com.example.joguinho.ui.GameOverDialogFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), GameOverDialogFragment.Listener {
+
     private lateinit var cannonView: CannonView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,8 +32,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onPause() {
+        super.onPause()
+        cannonView.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        cannonView.resumeGame()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         cannonView.releaseResources()
+    }
+
+    override fun onPlayAgain() {
+        cannonView.onPlayAgain()
     }
 }

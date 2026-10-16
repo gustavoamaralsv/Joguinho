@@ -1,4 +1,4 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 import android.graphics.RectF
@@ -12,7 +12,7 @@ open class MovingBar(
     private var velocityY: Float,
     private val minY: Float,
     private val maxY: Float,
-    val color: Int
+    val color: Int,
 ) : GameElement() {
 
     val rect = RectF(left, top, left + width, top + height)

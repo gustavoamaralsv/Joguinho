@@ -1,4 +1,4 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 import android.graphics.Color
@@ -13,11 +13,13 @@ class Cannon(
     private val baseY: Float,
     private val baseRadius: Float,
     private val barrelLength: Float,
-    barrelWidth: Float
+    barrelWidth: Float,
 ) : GameElement() {
 
     private val baseX = 0f
-    private val hubPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.rgb(150, 150, 165) }
+    private val hubPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.rgb(150, 150, 165)
+    }
 
     var angle = 0f
         private set

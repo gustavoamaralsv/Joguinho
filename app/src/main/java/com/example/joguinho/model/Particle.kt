@@ -1,4 +1,4 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -12,7 +12,7 @@ class Particle(
     private var vy: Float,
     private val color: Int,
     private val radius: Float,
-    private val gravity: Float
+    private val gravity: Float,
 ) {
     private var life = 1f
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -33,4 +33,3 @@ class Particle(
         canvas.drawCircle(x, y, radius * max(life, 0.25f), paint)
     }
 }
-

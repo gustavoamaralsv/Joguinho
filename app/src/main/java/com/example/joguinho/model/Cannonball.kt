@@ -1,12 +1,14 @@
-package com.example.joguinho
+package com.example.joguinho.model
 
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import com.example.joguinho.game.Collision
 
 /** Bala do canhão: um círculo com rastro e velocidade em pixels por segundo. */
 class Cannonball(val radius: Float) : GameElement() {
+
     companion object {
         private const val TRAIL = 8
     }
@@ -20,7 +22,9 @@ class Cannonball(val radius: Float) : GameElement() {
     private val trailX = FloatArray(TRAIL)
     private val trailY = FloatArray(TRAIL)
     private var trailCount = 0
-    private val trailPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = Color.rgb(255, 140, 0) }
+    private val trailPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = Color.rgb(255, 140, 0)
+    }
 
     init {
         paint.color = Color.rgb(40, 40, 40)
@@ -55,13 +59,13 @@ class Cannonball(val radius: Float) : GameElement() {
     fun isOutside(width: Int, height: Int): Boolean =
         x < -radius || x > width + radius || y < -radius || y > height + radius
 
-    fun overlaps(r: RectF): Boolean {
-        val nearestX = x.coerceIn(r.left, r.right)
-        val nearestY = y.coerceIn(r.top, r.bottom)
-        val dx = x - nearestX
-        val dy = y - nearestY
-        return dx * dx + dy * dy <= radius * radius
-    }
+    fun overlaps(r: RectF): Boolean =
+        Collision.circleOverlapsRect(
+            x,
+            y,
+            radius,
+            Collision.Rect(r.left, r.top, r.right, r.bottom),
+        )
 
     override fun draw(canvas: Canvas) {
         if (!onScreen) return
