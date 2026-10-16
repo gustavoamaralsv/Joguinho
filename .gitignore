@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Preview HTML/JS local (não faz parte da entrega Android)
+/web-preview/
